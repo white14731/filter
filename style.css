@@ -1,0 +1,69 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+    background-color: #f8f8f8; /* Светлый фон */
+    color: #333; /* Темный текст */
+}
+
+h1, h2 {
+    color: #2c3e50; /* Темно-синий цвет для заголовков */
+    margin-bottom: 15px; /* Отступ после заголовков */
+    border-bottom: 2px solid #ddd; /* Линия под заголовком */
+    padding-bottom: 5px;
+}
+
+.filter-section {
+    margin-bottom: 20px; /* Отступ между секциями фильтров */
+    background-color: #fff; /* Белый фон для секций фильтров */
+    padding: 20px;
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.filter-section label {
+    display: block; /* Каждый чекбокс на новой строке */
+    margin-bottom: 8px;
+    cursor: pointer; /* Изменение курсора на руку */
+}
+
+.filter-section input[type="checkbox"] {
+    margin-right: 5px; /* Отступ справа от чекбокса */
+}
+
+#products-container {
+    margin-top: 20px;
+    display: flex; /* Используем flexbox для расположения товаров */
+    flex-wrap: wrap; /* Разрешаем перенос товаров на новую строку */
+    justify-content: flex-start; /* выравниваем товары в начале строки */
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    display: inline-block;
+    background-color: #fff; /* Белый фон для товаров */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Легкая тень для товаров */
+    transition: all 0.3s ease; /* Плавная анимация */
+    text-align: center; /* Центрируем текст внутри */
+}
+
+.product:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Усиливаем тень при наведении */
+    transform: translateY(-2px); /* Небольшое смещение вверх */
+}
+
+
+/* Для мобильных устройств */
+@media (max-width: 600px) {
+    #products-container {
+        justify-content: center; /* центрируем товары на маленьких экранах */
+    }
+
+    .product {
+        width: calc(50% - 20px); /* два товара в строке */
+        margin: 5px; /* меньший отступ между товарами */
+    }
+}
